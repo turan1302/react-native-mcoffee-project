@@ -5,6 +5,7 @@ Kendimi geliştirme sürecinde kodladığım bu projenin tasarımı tamamen Rıd
 Projenin ön kısmı React Native ile yazılmış, backend olarak da Laravel teknolojisi kullanılmıştır
 
 Rıdvan ÜÇDAĞ Github Hesabı: https://github.com/ridvanucdag
+
 Rıdvan ÜÇDAĞ Coffee Shop Mobile App Projesi: https://github.com/ridvanucdag/coffee-shop-mobile-app
 
 Rıdvan ÜÇDAĞ Coffee Shop Mobile App Tasarımı:
