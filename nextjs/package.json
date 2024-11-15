@@ -1,0 +1,33 @@
+{
+  "name": "coffee-admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "browser": {
+    "crypto": false
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "bootstrap": "^4.6.0",
+    "crypto-browserify": "^3.12.1",
+    "crypto-js": "^4.2.0",
+    "date-fns": "^4.1.0",
+    "formik": "^2.4.6",
+    "jwt-decode": "^4.0.0",
+    "jwt-encode": "^1.0.1",
+    "mobx": "^6.13.5",
+    "mobx-react": "^9.1.1",
+    "next": "15.0.2",
+    "react": "19.0.0-rc-02c0e824-20241028",
+    "react-bootstrap": "^2.10.5",
+    "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "react-laravel-paginex": "^2.0.8",
+    "sweetalert2": "^11.14.5",
+    "yup": "^1.4.0"
+  }
+}
