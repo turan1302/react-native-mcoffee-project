@@ -11,7 +11,19 @@ class OrdersModel extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $appends = ['payment_status'];
+    protected $appends = ['payment_type','payment_status','delivery_status'];
+
+    public function getPaymentTypeAttribute()
+    {
+        switch ($this->ord_payment_type) {
+            case 0:
+                return 'Sana Gelsin';
+            case 1:
+                return 'Gel Al';
+            default:
+                return 'Bilinmiyor';  // İstenmeyen bir değer durumunda
+        }
+    }
 
     public function getPaymentStatusAttribute()
     {
@@ -20,6 +32,20 @@ class OrdersModel extends Model
                 return 'Bekliyor';
             case 1:
                 return 'Ödendi';
+            case 2:
+                return 'İptal Edildi';
+            default:
+                return 'Bilinmiyor';  // İstenmeyen bir değer durumunda
+        }
+    }
+
+    public function getDeliveryStatusAttribute()
+    {
+        switch ($this->ord_delivery_status) {
+            case 0:
+                return 'Bekliyor';
+            case 1:
+                return 'Teslim Edildi';
             case 2:
                 return 'İptal Edildi';
             default:

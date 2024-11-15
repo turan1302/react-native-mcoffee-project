@@ -102,6 +102,7 @@ function add_customer_bill($data, $ord_no, $bl_type, $ord_payment_type = 0, $cou
         "bl_address" => $data['ord_address'],
         "bl_price" => str_replace(",", "", $total_price),
         "bl_kdv" => $settings->set_kdv,
+        "bl_courier_price" => $settings->set_courier_price,
         //"bl_total_price" => str_replace(",", "", $total_price) * ((100 + $settings->set_kdv) / 100),
         "bl_total_price" => str_replace(",","",($total_price * (100 + $settings->set_kdv) / 100 + (($ord_payment_type==SANA_GELSIN) ? $courier_price : 0))),
     ));

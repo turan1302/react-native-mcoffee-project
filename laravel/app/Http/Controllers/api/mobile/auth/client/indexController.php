@@ -17,7 +17,10 @@ class indexController extends BaseController
     {
         $data = $request->except("_token");
 
-        $user = ClientModel::where("email", $data['email'])->first();
+        $user = ClientModel::where([
+            ["email","=",$data['email']],
+            ["status","=",1]
+        ])->first();
 
         if ($user && Hash::check($data['password'], $user->password)) {
             $token = $user->createToken('coffee')->accessToken;

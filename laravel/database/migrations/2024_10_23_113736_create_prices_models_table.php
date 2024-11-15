@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('cfp_size')->nullable();
             $table->decimal('cfp_price',10,2)->nullable();
             $table->tinyInteger('cfp_status')->default(1)->nullable()->comment("1 aktif 0 pasif");
-            $table->tinyInteger('cfp_default')->default(1)->nullable()->comment("1 aktif 0 pasif");
+            $table->tinyInteger('cfp_default')->default(0)->nullable()->comment("1 aktif 0 pasif");
             $table->softDeletes();
             $table->timestamp('cfp_created_at')->nullable();
             $table->timestamp('cfp_updated_at')->nullable();
